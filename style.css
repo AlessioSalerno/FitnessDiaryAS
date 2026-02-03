@@ -1,17 +1,26 @@
-* {
-  box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  margin: 0;
-  background: #f2f2f2;
-  padding-bottom: 70px;
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: #222;
+  padding: 10px;
+}
+
+nav button {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 16px;
 }
 
 .page {
   display: none;
-  padding: 16px;
+  padding: 15px;
 }
 
 .page.active {
@@ -20,48 +29,12 @@ body {
 
 input, button {
   width: 100%;
-  padding: 12px;
-  margin-top: 8px;
-  border-radius: 12px;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+.day {
   border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-button {
-  background: #111;
-  color: white;
-  border: none;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-.day-block {
-  background: white;
-  padding: 14px;
-  border-radius: 14px;
-  margin-bottom: 16px;
-}
-
-.session-block {
-  margin-top: 10px;
-  padding-left: 10px;
-  border-left: 3px solid #ddd;
-}
-
-/* MENU */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  background: white;
-  border-top: 1px solid #ddd;
-}
-
-.bottom-nav button {
-  flex: 1;
-  background: none;
-  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
 }

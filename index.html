@@ -2,61 +2,51 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Fitness Diary</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Fitness Diary</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- UTENTE -->
-<section id="utente" class="page active">
-  <h2>👤 Profilo</h2>
+  <nav>
+    <button data-page="utente">Utente</button>
+    <button data-page="sessione">Sessione</button>
+    <button data-page="diario">Diario</button>
+  </nav>
 
-  <input id="name" placeholder="Nome">
-  <input id="height" type="number" placeholder="Altezza (cm)">
-  <input id="weight" type="number" placeholder="Peso (kg)">
+  <!-- UTENTE -->
+  <section id="utente" class="page active">
+    <h2>Profilo Utente</h2>
+    <input id="name" placeholder="Nome">
+    <input id="height" placeholder="Altezza (cm)">
+    <input id="weight" placeholder="Peso (kg)">
+    <button id="saveUser">Salva Profilo</button>
+  </section>
 
-  <button id="saveUser">💾 Salva Profilo</button>
-</section>
+  <!-- SESSIONE -->
+  <section id="sessione" class="page">
+    <h2>Nuova Sessione</h2>
+    <input id="muscle" placeholder="Zona allenata">
 
-<!-- SESSIONE -->
-<section id="sessione" class="page">
-  <h2>🏋️ Nuova Sessione</h2>
+    <h3>Esercizio</h3>
+    <input id="exName" placeholder="Nome esercizio">
+    <input id="exReps" placeholder="Ripetizioni">
+    <input id="exWeight" placeholder="Peso / Corpo libero">
 
-  <input id="muscle" placeholder="Zona allenata">
+    <button id="addEx">Aggiungi esercizio</button>
 
-  <input id="exName" placeholder="Esercizio">
-  <input id="exReps" type="number" placeholder="Ripetizioni">
-  <input id="exWeight" placeholder="Peso / Corpo libero">
+    <ul id="tempExercises"></ul>
 
-  <button id="addEx">➕ Aggiungi esercizio</button>
-  <ul id="tempExercises"></ul>
+    <button id="saveSession">Salva Sessione</button>
+  </section>
 
-  <button id="saveSession">💾 Salva Sessione</button>
-</section>
+  <!-- DIARIO -->
+  <section id="diario" class="page">
+    <h2>Diario Allenamenti</h2>
+    <div id="diary"></div>
+  </section>
 
-<!-- DIARIO -->
-<section id="diario" class="page">
-  <h2>📓 Diario Allenamenti</h2>
-  <div id="diary"></div>
-</section>
-
-<!-- PROGRESSI -->
-<section id="progressi" class="page">
-  <h2>📈 Progressi</h2>
-  <canvas id="volumeChart"></canvas>
-</section>
-
-<!-- MENU MOBILE -->
-<nav class="bottom-nav">
-  <button data-page="utente">👤</button>
-  <button data-page="sessione">🏋️</button>
-  <button data-page="diario">📓</button>
-  <button data-page="progressi">📈</button>
-</nav>
-
-<script src="script.js"></script>
+  <!-- QUESTO È FONDAMENTALE -->
+  <script src="script.js" defer></script>
 </body>
 </html>
