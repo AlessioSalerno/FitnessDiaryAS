@@ -34,14 +34,20 @@ button {
 }
 
 ul {
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .day-block {
   background: white;
-  padding: 12px;
+  padding: 14px;
   border-radius: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.session-block {
+  margin-top: 10px;
+  padding-left: 10px;
+  border-left: 3px solid #ddd;
 }
 
 /* MENU */
